@@ -8,7 +8,8 @@ public class CalculationService {
 
     @Cacheable(
             cacheNames = "cacheOfBigCalculation",
-            key = "{#numberOne,#numberTwo}"
+            key = "{#numberOne,#numberTwo}",
+            sync = true
     )
     public double calculateSomethingBig(double numberOne, double numberTwo) {
         // Simulate something big
