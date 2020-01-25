@@ -6,20 +6,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class CalculationService {
 
-    @Cacheable(
-            cacheNames = "cacheOfBigCalculation",
-            key = "{#numberOne,#numberTwo}",
-            sync = true
-    )
+    @Cacheable(cacheNames = "cacheOfBigCalculation")
     public double calculateSomethingBig(double numberOne, double numberTwo) {
-        // Simulate something big
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        // Nothing big here, just for demo
+        System.out.println("calculating ...");
         return numberOne * numberTwo;
     }
 }
