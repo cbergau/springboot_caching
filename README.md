@@ -12,3 +12,5 @@ Spring uses 5 Annotations
 **@Caching** - Wrapper for multiple @CacheEvict or @CachePut Annotations
 
 **@CacheConfig** - Configure Cache
+
+Uses **JSR-107** JCache Java temporary caching API (https://www.jcp.org/en/jsr/detail?id=107)
